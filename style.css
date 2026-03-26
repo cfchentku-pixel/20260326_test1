@@ -1,0 +1,214 @@
+/* ===== 基本設定 ===== */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== 整體佈局 ===== */
+.resume {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* ===== 左側欄 ===== */
+.left {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px;
+    width: 35%;
+}
+
+.left h1 {
+    color: #fff;
+}
+
+.left h4 {
+    font-weight: 300;
+    color: #bdc3c7;
+    margin-top: 0;
+}
+
+.left hr {
+    border: 0;
+    border-top: 1px solid #7f8c8d;
+    margin: 20px 0;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #3498db;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn.fill {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn.fill:hover {
+    background: #2980b9;
+}
+
+
+.block {
+    margin-top: 30px;
+}
+
+.block h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* 專業技能 (圓弧) */
+.listSkill {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.listSkill li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-name {
+    font-size: 12px;
+    margin-top: 8px;
+    height: 3em; /* 給予固定高度以對齊 */
+}
+
+.skill-arc-container {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.skill-arc-container svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* 讓圓弧從頂部開始 */
+}
+
+.skill-arc-container .arc-bg {
+    fill: none;
+    stroke: #34495e;
+    stroke-width: 6;
+}
+
+.skill-arc-container .arc-progress {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.skill-arc-container .arc-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 程式技能 (長條) */
+.listProgram {
+    list-style: none;
+    padding: 0;
+}
+
+.listProgram li {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.bar {
+    background-color: #34495e;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.value {
+    background-color: #3498db;
+    height: 100%;
+    border-radius: 5px;
+    width: 0; /* 初始寬度為 0 */
+    transition: width 1.5s ease-out;
+}
+
+/* ===== 右側欄 ===== */
+.right {
+    padding: 40px;
+    width: 65%;
+    position: relative;
+}
+
+.right .block {
+    margin-bottom: 30px;
+}
+
+.right .block h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.listExperience, .right ul {
+    padding-left: 20px;
+}
+
+.listExperience .year {
+    list-style: none;
+    margin-left: -20px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.listExperience .year ul {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* 裝飾線 */
+.decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background: #3498db;
+}
